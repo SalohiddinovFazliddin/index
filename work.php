@@ -19,7 +19,7 @@ class Currency{
         $separeted_data = [];
         $currencies_info = $this->currencies;
         foreach($currencies_info as $currency) {
-            $separeted_data($currencies->Ccy) = $currency->Rate;
+            $separeted_data[$currency->Ccy] = $currency->Rate;
 
         }
         return $separeted_data;
@@ -29,6 +29,14 @@ class Currency{
     public function exchange($value, $currency_name='USD') {
 
         echo ceil($value / $this->getCurrencies()[$currency_name]) . ' ' . $currency_name;
+
+    
+    
+
+    
+    
+
+       
         
     }
 }
